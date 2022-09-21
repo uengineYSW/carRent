@@ -5,7 +5,7 @@ server:
 
 
 keycloak-client:
-  server-url: http://localhost:9090
+  server-url: https://9090-uengineysw-carrent-wjzq45ynvz2.ws-us65.gitpod.io
   realm: master
 
 spring:
@@ -48,13 +48,13 @@ spring:
       client:
         provider:
           keycloak:
-            issuer-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}
+            issuer-uri: https://9090-uengineysw-carrent-wjzq45ynvz2.ws-us65.gitpod.io/realms/${keycloak-client.realm}
             user-name-attribute: preferred_username
         registration:
           keycloak:
-            client-id: "<client-id>"
+            client-id: master
             client-secret: 
-            redirect-uri: "gateway-path/login/oauth2/code/client-name"
+            redirect-uri: https://8088-uengineysw-carrent-wjzq45ynvz2.ws-us65.gitpod.io/login/oauth2/code/master
             authorization-grant-type: authorization_code
             scope: openid
       resourceserver:

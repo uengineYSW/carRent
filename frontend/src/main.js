@@ -67,7 +67,7 @@ Vue.prototype.$ManagerLists.forEach(function(item, idx) {
 })
 
 let initOptions = {
-  url: `http://localhost:9090/`,
+  url: `https://9090-uengineysw-carrent-wjzq45ynvz2.ws-us65.gitpod.io/`,
   realm: `master`,
   clientId: `master`,
   onLoad: `login-required`,

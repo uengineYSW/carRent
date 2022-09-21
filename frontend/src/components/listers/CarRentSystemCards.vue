@@ -40,7 +40,6 @@
 
 <script>
 
-    const axios = require('axios').default;
     import CarRentSystem from './../CarRentSystem.vue';
 
     export default {
@@ -64,20 +63,19 @@
                 return;
             } 
 
-            var temp = await axios.get(axios.fixUrl('/carRentSystems'))
-            me.values = temp.data._embedded.carRentSystems;
-            
-            me.newValue = {
-                'rentId': 0,
-                'carId': '',
-                'userId': '',
+            var testValue = {
+                'rentId': 1,
+                'carId': '1',
+                'userId': 'test',
                 'rentStartDate': '2022-09-19',
                 'rentEndDate': '2022-09-19',
                 'regDate': '2022-09-19',
-                'rentStatus': '',
-                'approverId': '',
-                'rentCost': 0,
+                'rentStatus': 'rent',
+                'approverId': 'admin',
+                'rentCost': 100000,
             }
+
+            me.values.push(testValue)
         },
         methods:{
             closeDialog(){
