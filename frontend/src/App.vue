@@ -151,18 +151,24 @@
                             </v-list-item>
 
                             <v-card-actions>
-                                <v-btn 
-                                    class="mx-auto"
-                                    outlined
-                                    rounded
-                                    key="vehicleManagementSystems"
-                                    to="/vehicleManagementSystems"
-                                    @click="changeUrl()"
-                                    color="deep-purple lighten-2"
-                                    style="font-weight:500; font-size:20px; padding:15px; border:solid 2px;"
-                                >
-                                    VehicleManagementSystem
-                                </v-btn>
+                                <v-tooltip bottom>
+                                    <template v-slot:activator="{ on }">
+                                        <v-btn 
+                                            v-on="on"
+                                            class="mx-auto"
+                                            outlined
+                                            rounded
+                                            key="vehicleManagementSystems"
+                                            to="/vehicleManagementSystems"
+                                            @click="changeUrl()"
+                                            color="deep-purple lighten-2"
+                                            style="font-weight:500; font-size:20px; padding:15px; border:solid 2px; max-width:250px; overflow:hidden"
+                                        >
+                                            VehicleManagementSystem
+                                        </v-btn>
+                                    </template>
+                                    <span>VehicleManagementSystem</span>
+                                </v-tooltip>
                             </v-card-actions>
                         </v-card>
 
@@ -219,7 +225,7 @@
                                     to="/memberManagementSystems"
                                     @click="changeUrl()"
                                     color="deep-purple lighten-2"
-                                    style="font-weight:500; font-size:20px; padding:15px; border:solid 2px;"
+                                    style="font-weight:500; font-size:20px; padding:15px; border:solid 2px; max-width:250px; overflow:hidden"
                                 >
                                     MemberManagementSystem
                                 </v-btn>
@@ -280,7 +286,7 @@ export default {
             //keycloak.logout;
             if(confirm("로그아웃 하시겠습니까?")){
                 localStorage.clear()
-                location.href = 'http://localhost:9090/realms/master/protocol/openid-connect/logout'
+                location.href = 'https://9090-uengineysw-carrent-wjzq45ynvz2.ws-us67.gitpod.io/realms/master/protocol/openid-connect/logout'
             }
         },
     }
